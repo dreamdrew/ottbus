@@ -1,2 +1,9 @@
 <h1>Scrape#index</h1>
 <p>Scrapping delays information from <%= @site %></p>
+<table>
+<% @delays.each do |delay| %>
+		<tr>
+				<td><%= delay %></td>
+		</tr>
+<% end %>
+</table>
