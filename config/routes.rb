@@ -9,6 +9,8 @@ Ottbus::Application.routes.draw do
 
   get 'scrape' => 'scrape#index'
 
+  resources :bus_routes
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

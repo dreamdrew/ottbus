@@ -7,7 +7,5 @@ class OTSABusDelay
 
 		def to_s()
 				str = @fields.join(',')
-				puts str
-				str
 		end
 end

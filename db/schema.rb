@@ -11,11 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109131447) do
+ActiveRecord::Schema.define(version: 20131117191907) do
 
   create_table "bus_delays", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "bus_route_id"
+    t.string   "direction"
+    t.string   "originalTime"
+    t.integer  "delayedMins"
+    t.string   "reason"
+    t.datetime "posted"
+    t.date     "date"
   end
+
+  create_table "bus_routes", force: true do |t|
+    t.string   "routeId"
+    t.string   "routeName"
+    t.string   "routeDirection"
+    t.string   "busCompany"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bus_routes", ["routeId"], name: "index_bus_routes_on_routeId", using: :btree
 
 end

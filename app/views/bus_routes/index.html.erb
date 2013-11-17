@@ -1,0 +1,8 @@
+<h1>Bus Routes</h1>
+<table>
+	<% @routes.each do |route| %>
+    <tr>
+			<td><%= link_to route.routeName, route, :id => route.routeId %></td>
+    </tr>
+	<% end %>
+</table>

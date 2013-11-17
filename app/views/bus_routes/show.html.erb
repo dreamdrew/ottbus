@@ -1,0 +1,19 @@
+<h1>Bus Route <%= @route.id %></h1>
+
+<table>
+		<tr><td><%= @route.routeName %></td></tr>
+		<tr><td><%= @route.busCompany %></td></tr>
+</table>
+<br/>
+<h2>Delays:</h2>
+<table>
+	<% @delays.each do |delay| %>
+			<tr>
+				<td><%= delay.date %></td>
+				<td><%= delay.direction %></td>
+				<td><%= delay.delayedMins %> minutes</td>
+				<td><%= delay.reason %></td>
+			</tr>
+	<% end %>
+</table>
+
