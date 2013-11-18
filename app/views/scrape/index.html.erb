@@ -3,7 +3,7 @@
 <table>
 <% @delays.each do |delay| %>
 		<tr>
-				<% link_label = delay.bus_route.routeLabel + ": " + delay.bus_route.routeName %> 
+				<% link_label = delay.bus_route.routeId + ": " + delay.bus_route.routeName %> 
 				<td><%= link_to link_label, delay.bus_route, :id => delay.bus_route.routeId %></td>
 		</tr>
 <% end %>
