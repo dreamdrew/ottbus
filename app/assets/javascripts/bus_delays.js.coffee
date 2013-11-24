@@ -2,4 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
-jQuery -> $('.bus_delays_date').datepicker('yyyy-mm-dd')
+jQuery -> $('.bus_delays_date').datepicker(dateFormat: 'yy-mm-dd')
+
+#$(document).on 'ready page:load', -> $('.bus_delays_date').datepicker({
+#            format: 'yy-mm-dd'
+#            autoclose: true
+#            todayHighlight: true
+#            language: 'en'
+#});
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
