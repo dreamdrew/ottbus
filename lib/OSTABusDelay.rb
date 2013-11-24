@@ -1,5 +1,5 @@
 
-class OTSABusDelay
+class OSTABusDelay
 
 		def initialize(fields)
 				@fields = fields

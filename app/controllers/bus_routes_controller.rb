@@ -1,6 +1,6 @@
 class BusRoutesController < ApplicationController
 		def index
-			@routes = BusRoute.find :all
+			@routes = BusRoute.all.order('bus_routes.routeName, bus_routes.routeId')
 		end
 
 		def show

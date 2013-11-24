@@ -1,10 +1,7 @@
-
 require 'nokogiri'
 require 'open-uri'
 
-#require 'OTSABusDelay'
-
-class OTSAParser
+class OSTAParser
 		def initialize
 		end
 
