@@ -4,11 +4,11 @@ class BusDelaysController < ApplicationController
 			if @bus_delays_date.nil?
 					@bus_delays_date = Date.current
 			end
-            @delays = BusDelay.find_by date: @bus_delays_date
+            @delays = BusDelay.find(:all, :conditions => { date: @bus_delays_date })
 			if @delays.nil?
 					@delays = []
 			end
-			#.order('bus_delays.route.routeName')
+			@delays
 		end
 
 #		def show
