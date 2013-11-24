@@ -1,6 +1,10 @@
 class BusDelaysController < ApplicationController
 		def index
-            @delays = BusDelay.find_by date: Date.current
+			@bus_delays_date = params[:bus_delays_date]
+			if @bus_delays_date.nil?
+					@bus_delays_date = Date.current
+			end
+            @delays = BusDelay.find_by date: @bus_delays_date
 			if @delays.nil?
 					@delays = []
 			end
