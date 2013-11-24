@@ -11,6 +11,8 @@ Ottbus::Application.routes.draw do
 
   resources :bus_routes
 
+  resources :bus_delays
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

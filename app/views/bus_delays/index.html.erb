@@ -1,0 +1,10 @@
+<h1>Bus Delays</h1>
+<table>
+	<% @delays.each do |delay| %>
+	<tr>
+			<% route = delay.route %>
+			<% linkLabel = route.routeName + " (" + route.routeId + ")"; %>
+			<td><%= link_to linkLabel, route, :id => route.routeId %></td>
+    </tr>
+	<% end %>
+</table>
