@@ -5,7 +5,7 @@ Ottbus::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'scrape#index'
+  root 'bus_routes#index'
 
   get 'scrape' => 'scrape#index'
 
