@@ -2,10 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
-jQuery -> $('.bus_delays_date').datepicker({
-		dateFormat: 'yy-mm-dd'
-		onSelect: (dateText, datepicker) -> $('#date_form_id').submit()
-	})
+jQuery -> 
+	if !Modernizr.inputtypes.date
+		$('.bus_delays_date').datepicker({
+			dateFormat: 'yy-mm-dd'
+			onSelect: (dateText, datepicker) -> $('#date_form_id').submit()
+		})
 
 #$(document).on 'ready page:load', -> $('.bus_delays_date').datepicker({
 #            format: 'yy-mm-dd'

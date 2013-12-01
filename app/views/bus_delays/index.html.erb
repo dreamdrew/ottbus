@@ -1,8 +1,8 @@
 <h1>Bus Delays</h1>
 
-<%= form_tag({}, {method: "get", id: :date_form_id}) do %>
+<%= form_tag({}, method: "get", id: :date_form_id) do %>
 		  <%= label_tag(:bus_delays_date, "Date:") %>
-		  <%= text_field_tag(:bus_delays_date, @bus_delays_date, class: :bus_delays_date) %>
+		  <%= date_field_tag(:bus_delays_date, @bus_delays_date, class: :bus_delays_date) %>
 			  <%= submit_tag("Check for delays") %>
 	  <% end %>
 
